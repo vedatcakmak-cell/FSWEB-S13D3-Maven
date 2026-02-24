@@ -1,34 +1,52 @@
 package org.example;
 
 public class Person {
-    String firstname;
-    String lastName;
-    int age;
-    boolean gender; // return true when its female
-    double height;
-    double weight;
+    private String firstName;
+    private String lastName;
+    private int age;
 
-    public Person(String firstname, String lastName, int age){
-        this.firstname = firstname;
-        this.lastName =lastName;
-        this.age= age;
+    private String email;
+    private String phoneNumber;
+    private String address;
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
-    public Person(String firstname, String lastName, int age, boolean gender, double height, double weight){
-        this(firstname,lastName,age);
-        this.gender=gender;
-        this.height=height;
-        this.weight=weight;
+
+    public Person(String firstName, String lastName, int age, String email, String phoneNumber, String address) {
+        this(firstName, lastName, age);
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
     }
-    public String getFirstName(){
-        return firstname;
+
+    public String getFirstName() {
+        return firstName;
     }
-    public  String getLastName(){
-        return  lastName;
+
+    public String getLastName() {
+        return lastName;
     }
-    public  int getAge(){
+
+    public int getAge() {
         return age;
     }
-    public boolean isTeen(){
-        return this.age >= 13 && this.age <= 19;
+
+    public boolean isTeen() {
+        return age >= 13 && age <= 19;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
     }
 }
